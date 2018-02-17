@@ -16,7 +16,11 @@ namespace GFMM_App
         {
             InitializeComponent();
 
-            DebugLabel.Text = ReadModList();
+            String modListJson = ReadModList();
+
+            Object modListObj = Newtonsoft.Json.JsonConvert.DeserializeObject(modListJson);
+
+            DebugLabel.Text = modListObj.ToString();
         }
 
         public String ReadModList()
