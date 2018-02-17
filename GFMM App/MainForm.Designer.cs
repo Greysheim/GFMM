@@ -1,6 +1,6 @@
 ﻿namespace GFMM_App
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.DebugLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Form1
+            // DebugLabel
+            // 
+            this.DebugLabel.AutoSize = true;
+            this.DebugLabel.Location = new System.Drawing.Point(11, 12);
+            this.DebugLabel.Name = "DebugLabel";
+            this.DebugLabel.Size = new System.Drawing.Size(74, 13);
+            this.DebugLabel.TabIndex = 0;
+            this.DebugLabel.Text = "[Debug Label]";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Form1";
+            this.Controls.Add(this.DebugLabel);
+            this.Name = "MainForm";
             this.Text = "GFFM - Grey\'s Factorio Mod Manager";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label DebugLabel;
     }
 }
 
